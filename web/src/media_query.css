@@ -1,0 +1,24 @@
+@media ( max-width:500px ) {
+	.weather-container {
+		flex-direction:column;
+		height:100%;
+	}
+	.weather-container form {
+	
+		padding:0;
+
+	}
+
+	.weather-container form .view-weather {
+		border-radius:0;
+	}
+
+
+	.weather-container form .search-button {
+		padding:0 50px;
+	}
+
+	.weather-container header {
+		padding:20px;
+	}
+}
