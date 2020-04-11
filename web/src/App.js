@@ -2,7 +2,8 @@ import React,{ useState } from 'react';
 import worldImg from './assets/world.svg';
 
 import './global.css';
-import './App.css'
+import './App.css';
+import './media_query.css';
 
 
 function App() {
@@ -42,19 +43,37 @@ function App() {
 			<form onSubmit={loadWeather}>
 				{viewWeather && (
 					<div className={`view-weather ${viewWeather}`}>
-						<p onClick={() => setViewWeather('')}>X</p>
-						<p>Niterói,RJ - Brasil</p>
+						<p id="close" onClick={() => setViewWeather('')}>X</p>
+						<p id="name">Niterói, RJ - Brasil</p>
 						<h1>20°C Nublado</h1>
 						<div className="group-temperature">
-							<p>\/ 16° /\ 25°</p>
-							<p>Vento 18km/h</p>
-							<p>Sensação 19°C</p>
-							<p>Humidade 89%</p>
+							<p>\/ <span>16°</span> /\ <span>25°</span></p>
+							<p>Sensação <span>19°C</span></p>
+							<p>Vento <span>18km/h</span></p>
+							<p>Humidade <span>89%</span></p>
 						</div>
 						<hr />
 						<div className="day-temperature">
-							<p>Terça</p>
-							<h3>18° 26°</h3>
+							<span>
+								<p>Terça</p>
+								<h3>18° 26°</h3>
+							</span>
+							<span>
+								<p>Quarta</p>
+								<h3>18° 26°</h3>
+							</span>
+							<span>
+								<p>Quinta</p>
+								<h3>18° 26°</h3>
+							</span>
+							<span>
+								<p>Sexta</p>
+								<h3>18° 26°</h3>
+							</span>
+							<span>
+								<p>Sabado</p>
+								<h3>18° 26°</h3>
+							</span>
 						</div>
 					</div>
 				)}
